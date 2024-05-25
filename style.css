@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 500;
+}
+:root{
+    --progress: 50%;
+    --primary-black-color:#111115;
+    --secondary-black-color:#18171F;
+    --primary-gray-color:#24232A;
+    --secondary-gray-color:#636269;
+    --white-color: #D0CED6;
+    --green-color:#A5FFAF;
+    --yellow-color:#EDCA71;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--primary-black-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+h1{
+    font-size: 2.2rem;
+    color: var(--secondary-gray-color);
+}
+h1 span{
+  transition: 0.4s;
+  display: inline-block;
+  width: 100px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 1.6rem;
+}
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--primary-gray-color);
+    border-radius: 2px;
+}
+.password{
+    color: var(--white-color);
+    font-size: 2.8rem;
+    overflow-x: scroll;
+    margin-right: 2rem;
+}
+/* The entire scrollbar */
+.password::-webkit-scrollbar {
+    height: 3px; /* Adjust the height of the horizontal scrollbar */
+
+}
+
+/* The scrollbar track */
+.password::-webkit-scrollbar-track {
+    background: var(--green-color); /* Track color */
+}
+
+/* The scrollbar handle */
+.password::-webkit-scrollbar-thumb {
+    background: var(--yellow-color); /* Track color */
+}
+
+/* The handle on hover */
+.password::-webkit-scrollbar-thumb:hover {
+    background: var(--white-color); /* Handle color on hover */
+}
+
+.result i{
+    color: var(--green-color);
+    font-size: 1.8rem;
+    transition: 0.4s;
+}
+.result i:hover{
+    color: var(--white-color);
+    cursor: pointer;
+}
+.generator{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem ;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--primary-gray-color);
+    border-radius: 2px;
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:  var(--white-color);
+    font-size: 1.4rem;
+}
+.slider-value{
+    font-size: 2.8rem;
+    color: var(--green-color);
+}
+input[type=range] {
+    width: 100%;
+    margin: 5.5px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, var(--green-color) var(--progress),var(--secondary-black-color) -100%);
+    border: 0;
+    border-radius: 1px;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -5.5px;
+    width: 16px;
+    height: 16px;
+    background: var(--white-color);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: 0.4s;
+  }
+    input[type=range]:hover::-webkit-slider-thumb {
+    background-color: var(--secondary-black-color);
+    border: var(--green-color) solid 1px;
+    cursor: pointer;
+
+  }
+  input[type=range]:focus::-webkit-slider-thumb {
+    background: var(--white-color);
+  }
+  input[type=range]::-moz-range-track {
+    background: linear-gradient(to right, var(--green-color) var(--progress),var(--secondary-black-color) -100%);
+    border: 0;
+    border-radius: 30px;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--white-color);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  input[type=range]:hover::-moz-range-thumb,  input[type=range]:focus::-moz-range-thumb{
+    background-color: var(--secondary-black-color);
+    border: var(--green-color) solid 1px;
+    cursor: pointer;
+
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 17.2px 0;
+    color: transparent;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--white-color);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+    box-shadow: 0px 15px 15px 3px #a4f3e8;
+    transition: 0.4s;
+  }
+  input[type=range]:hover::-ms-thumb,  input[type=range]:focus::-ms-thumb{
+    background-color: var(--secondary-black-color);
+    border: var(--green-color) solid 1px;
+    cursor: pointer;
+  }
+  .requirements{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+.requirements label{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.requirements p{
+    font-size: 2rem;
+    color: var(--white-color);
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    font: inherit;
+  color: var(--primary-gray-color);
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2px solid var(--white-color);
+  display: grid;
+  place-content: center;
+  transition: 0.4s;
+}
+input[type="checkbox"]::before {
+    content: "";
+    width: 1.1em;
+    height: 1.1em;
+    transform: scale(0);
+    transition: 0.4s;
+    box-shadow: inset 1em 1em var(--primary-gray-color);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  
+  }
+  input[type="checkbox"]:checked{
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+  }
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  input[type="checkbox"]:focus {
+    border-color: var(--yellow-color);
+    outline: none;
+  }
+  input[type="checkbox"]:hover {
+    border: solid 2px var(--green-color);
+    cursor: pointer;
+  }
+
+  .strength-cheker{
+    background-color: var(--secondary-black-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 1.2rem 2.4rem;
+  }
+  .strength-cheker p{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--secondary-gray-color);
+  }
+  .cheker{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cheker p{
+    font-size: 2.2rem;
+    color: var(--white-color);
+  }
+  .rectangles{
+    display: flex;
+    align-self: center;
+    gap: 0.6rem;
+  }
+  .rectangle{
+    width: 7px;
+    height: 24px;
+    border: solid 1px var(--white-color);
+  }
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--green-color);
+    color: var(--primary-black-color);
+    padding: 1.6rem 2.4rem;
+    border: 1px solid transparent;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+  button p{
+    font-size: 1.6rem;
+  }
+  button:hover{
+    border: 1px solid var(--green-color);
+    background-color: transparent;
+    color: var(--green-color);
+  }
+  button i{
+    color: var(--primary-black-color);
+  }
+  button:hover i{
+    color: var(--green-color);
+  }
+  button:focus{
+    border:solid 1px var(--yellow-color);
+  }
+  @media (max-width:425px) {
+    .container{
+        width: 90%;
+    }
+    .strength-cheker p{
+      font-size: 1.2rem;
+    }
+    .strength-cheker{
+        padding: 0.8rem 1.6rem;
+        gap: 1rem;
+    }
+    .requirements p,.cheker p{
+      font-size: 1.6rem;
+  }
+    .rectangles{
+        gap: 0.4rem;
+    }
+  }

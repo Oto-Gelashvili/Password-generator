@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Password Generator">
+    <link rel="shortcut icon" href="img/lock-solid.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a90981c20e.js" crossorigin="anonymous"></script>
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <h1>Password <span>Generator</span></h1>
+    <div class="container">
+        <section class="result">
+            <h2 class="password">Random Password</h2>
+            <i class="fa-regular fa-copy"></i>
+        </section>
+        <section class="generator">
+            <form class="slider">
+                <div class="info">
+                    <p>Character Length</p>
+                    <label for="slider" class="slider-value">16</label>
+                </div>
+                <input type="range" min="8" max="24" value="16" id="slider">
+            </form>
+            <form class="requirements">
+                <label>
+                    <input type="checkbox" id="0" checked>
+                    <p>Include Uppercase Letters</p>
+                </label>
+                <label>
+                    <input type="checkbox" id="1" checked>
+                    <p>Include Lowercase Letters</p>
+                </label>
+                <label>
+                    <input type="checkbox" id="2">
+                    <p>Include Numbers</p>
+                </label>
+                <label>
+                    <input type="checkbox" id="3">
+                    <p>Include Symbols</p>
+                </label>
+            </form>
+            <div class="strength-cheker">
+                <p>Strength</p>
+                <div class="cheker">
+                    <p>MEDIUM</p>
+                    <div class="rectangles">
+                        <div class="rectangle easy"></div>
+                        <div class="rectangle medium"></div>
+                        <div class="rectangle hard"></div>
+                        <div class="rectangle very-hard"></div>
+                    </div>
+                </div>
+            </div>
+            <button>
+                <p>GENERATE</p>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </section>
+    </div>
+    <script src="index.js"></script>
+    <script src="bundle.js"></script>
+
+</body>
+
+</html>
